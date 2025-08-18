@@ -13,8 +13,8 @@ const totalEnigmes = 4;
 const solutions = {
   1: ["Jaune","jaune"],
   2: ["4", "quatre"],
-  3: ["a", "A"],
-  4: ["l", "L"]
+  3: ["l", "L"],
+  4: ["a", "A"]
 };
 
 // ====== FONCTIONS UTILITAIRES ======
