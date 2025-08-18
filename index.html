@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escape Game - Le Moulin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔍 Le secret du moulin</h1>
+    <p>Oups on a fait une bêtise! Aide nous à la réparer en résolvant les énigmes se trouvant sur chaque pancarte numérotée. </p>
+    
+    <div class="progress">
+      <p>Progression : <span id="progress-text">0/4</span></p>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+    
+    <!-- Énigme 1 -->
+    <div class="enigme" id="enigme1">
+      <h2>Énigme 1 : Le méchant meunier</h2>
+      <p>Quelle sera la couleur du prochain grain?</p>
+      <input type="text" id="input1" placeholder="Entrez la couleur" maxlength="10">
+      <button onclick="checkEnigme(1)">Valider</button>
+    </div>
+    
+    <div class="histoire" id="histoire1">
+      <h3>📜 Partie 1</h3>
+      <p>En 1637, niché au creux de la verdoyante vallée du Foron, un moulin dont la grande roue de bois tournait paresseusement au gré des eaux claires. Ce moulin appartenait à Maître Cornélius, un homme dont la réputation s'étendait bien au-delà des rives de la rivière. Non pas pour la qualité de sa farine, hélas, mais pour son avarice légendaire. Chaque grain de blé était pesé avec une minutie obsessionnelle, chaque centime arraché avec un sourire pincé. Les villageois soupiraient en voyant sa silhouette trapue, sachant que la transaction serait longue et coûteuse.
+
+Un été, une sécheresse inattendue s'abattit sur la région. Le Foron, d'ordinaire si généreux, se réduisit à un maigre filet d'eau. La grande roue du moulin de Maître Cornélius s'arrêta, grinçante, comme un gémissement. Le meunier, livide, arpentait les berges, ses mains moites caressant les pierres sèches. Pas d'eau, pas de moulin ; pas de moulin, pas de farine ; pas de farine, pas d'argent. Son cœur se serrait à l'idée de perdre ses précieux gains.
+
+Alors qu'il maudissait le ciel et les éléments, une douce mélodie s'éleva du cœur de la rivière asséchée. Une silhouette éthérée, vêtue de voiles de brume et parsemée de gouttelettes scintillantes, émergea lentement. C'était la Fée du Foron, gardienne des eaux et des esprits de la nature. Ses yeux verts comme les reflets de la rivière, se posèrent sur Maître Cornélius.</p>
+    </div>
+    
+    <!-- Énigme 2 -->
+    <div class="enigme" id="enigme2">
+      <h2>Énigme 2 : Les ailes du moulin</h2>
+      <p>Combien de grains de blé bleu vois tu ?</p>
+      <input type="number" id="input2" placeholder="Entrez un nombre" min="1" max="10">
+      <button onclick="checkEnigme(2)">Valider</button>
+    </div>
+    
+    <div class="histoire" id="histoire2">
+      <h3>📜 Partie 2</h3>
+      <p>« Maître Cornélius, dit la Fée d'une voix mélodieuse et pourtant ferme, j'entends les lamentations de mon peuple et je ressens l'amertume de leur faim. Votre grenier déborde, mais votre âme est vide. Vous ne voyez le monde qu'à travers le prisme de vos comptes et de vos gains. »
+
+Le meunier, figé par la surprise et un certain malaise, tenta de bafouiller quelques excuses, des promesses de donations futures, espérant que la Fée restaurerait le cours d'eau pour qu'il puisse reprendre ses affaires lucratives.
+
+« Vos paroles sont creuses, Maître Cornélius, répliqua la Fée. La nature donne sans mesure, mais elle n'oublie jamais les cœurs avides. Puisque votre existence se résume à des chiffres et des profits, vous deviendrez l'incarnation de ce que vous chérissez le plus. »</p>
+    </div>
+    
+    <!-- Énigme 3 -->
+    <div class="enigme" id="enigme3">
+      <h2>Énigme 3 : Le mot du vent</h2>
+      <p> Quelle est la lettre manquante pour reconstituer le mot ?</p>
+      <input type="text" id="input3" placeholder="Entrez la lettre" maxlength="20">
+      <button onclick="checkEnigme(3)">Valider</button>
+    </div>
+    
+    <div class="histoire" id="histoire3">
+      <h3>📜 Partie 3</h3>
+      <p>D'un geste lent et hypnotisant de sa main fine, la Fée toucha le front du meunier. Maître Cornélius sentit une étrange lourdeur l'envahir. Ses membres se raidirent, sa peau devint parcheminée, ses doigts s'épaissirent en une couverture rigide. Un frisson parcourut son corps alors qu'il sentait son être se transformer. Ses cheveux devinrent des pages, sa chair une reliure, et ses yeux des marques d'encre.
+
+En un instant, le corpulent Maître Cornélius disparut, remplacé par un grand livre de comptes, épais et bien relié. Sa couverture était d'un cuir sombre, et sur la première page, on pouvait lire, dans une écriture élégante et mystérieuse : "Livre des Dettes et Profits de Maître Cornélius".
+
+La Fée du Foron le plaça au centre du moulin, là où Maître Cornélius tenait autrefois ses comptes. Le livre s'ouvrit de lui-même, révélant des pages remplies de chiffres minutieux, de colonnes de dépenses et de recettes, de dettes réclamées et de profits accumulés. Chaque page reflétait une parcelle de l'avarice du meunier.
+
+Les villageois, intrigués par l'arrêt prolongé du moulin, vinrent aux nouvelles. Ils trouvèrent le livre étrange, posé là, immobile. Un enfant, plus audacieux, s'approcha et toucha la page. Aussitôt, une voix rauque et familière s'éleva du livre : celle de Maître Cornélius, récitant des chiffres et des sommes d'argent.Le village entier comprit la punition. Le meunier, enfermé dans l'objet de sa propre obsession, était condamné à réciter éternellement les comptes de son avarice. Jour et nuit, on pouvait entendre le murmure des chiffres s'échapper du livre, un rappel constant de ce qu'il avait été.</p>
+    </div>
+
+     <!-- Énigme 4 -->
+    <div class="enigme" id="enigme4">
+      <h2>Énigme 4 : Le mot de la fin</h2>
+      <p> Quelle lettre est la bonne réponse ?</p>
+      <input type="text" id="input4" placeholder="Entrez la lettre" maxlength="20">
+      <button onclick="checkEnigme(4)">Valider</button>
+    </div>
+    
+    <div class="histoire" id="histoire4">
+      <h3>📜 Partie 4</h3>
+      <p>Le moulin tomba en ruines, puis, avec le temps, le maire décida de lui redonner vie. Il trouva le livre de Maître Cornélius, toujours ouvert sur ses comptes. Un jour, en regardant le livre, il eut une idée. Il décida de donner le livre des comptes à la responsable des archives du village qui pour le préserver choisit de le numériser. Chaque page numérisée effaçait les noms des villageois qui devaient de l'argent à Maître Cornélius, mais lui était téléchargé dans l'ordinateur de la responsable des archives.
+
+À chaque page numérisée, la voix de Maître Cornélius se faisait entendre dans tous les ordinateurs de la mairie.  Finalement, la dernière dette annulée, la dernière page devint blanche..
+
+Cependant la malédiction n'était pas levée pour autant,  Maître Cornélius était prisonnier dans le monde numérique.Il attendait que les gens trouvent les solutions aux énigmes du moulin. Et la Fée du Foron dans tout ça? Elle continua de veiller sur la rivière, s'assurant que la leçon du meunier avare ne soit jamais oubliée.</p>
+    </div>
+    
+    <div class="final-message" id="final-message">
+      <h2>🎉 Félicitations !</h2>
+      <p>Vous avez résolu toutes les énigmes et découvert l'histoire complète de Maître Cornélius. Grâce aux réponses trouvées, l'esprit de Maître Cornélius est libéré des ordinateurs de la mairie</p>
+      <p><strong>L'esprit de Maître Cornélius peut maintenant reposer en paix...</strong></p>
+    </div>
+    
+    <div id="message-container"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
